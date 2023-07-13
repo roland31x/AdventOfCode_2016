@@ -84,7 +84,7 @@ namespace D07
             {
                 for (int i = 0; i < s.Length - 2; i++)
                 {
-                    if (s[i] == s[i + 2])
+                    if (s[i] == s[i + 2] && s[i + 1] != s[i])
                     {
                         foreach(string super in supernet)
                         {
