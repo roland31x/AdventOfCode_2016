@@ -1,4 +1,6 @@
-﻿namespace D15
+﻿using System;
+
+namespace D15
 {
     internal class Program
     {
@@ -14,27 +16,18 @@
                 }
             }
             int time = 0;
-            bool found = false;
-            while (!found)
-            {
-                for(int i = 0; i < discs.Count; i++)
-                {
-                    if ((discs[i].Position + time + i + 1) % discs[i].Max != 0)
-                        break;
-                    if (i == discs.Count - 1)                       
-                    {
-                        found = true;
-                        break;
-                    }
-                }
-                time++;
-            }           
+            Sim(discs, ref time);
             Console.WriteLine("Part 1 solution:");
             Console.WriteLine(time - 1);
 
             discs.Add(new Disc(0, 11));
-            time = 0;
-            found = false;
+            Sim(discs, ref time);
+            Console.WriteLine("Part 2 solution:");
+            Console.WriteLine(time - 1);
+        }
+        static void Sim(List<Disc> discs, ref int time)
+        {
+            bool found = false;
             while (!found)
             {
                 for (int i = 0; i < discs.Count; i++)
@@ -49,8 +42,6 @@
                 }
                 time++;
             }
-            Console.WriteLine("Part 2 solution:");
-            Console.WriteLine(time - 1);
         }
     }
     public class Disc
