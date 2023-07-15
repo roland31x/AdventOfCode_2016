@@ -26,7 +26,7 @@
             }
             Filled = FillDisk(35651584, initial);
             checksum = GetChecksum(Filled);
-            Console.WriteLine("Part 1 solution: ");
+            Console.WriteLine("Part 2 solution: ");
             for (int i = 0; i < checksum.Count; i++)
             {
                 Console.Write(checksum[i]);
