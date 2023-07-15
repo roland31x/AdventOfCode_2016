@@ -7,7 +7,7 @@ namespace D14
     {
         static void Main(string[] args)
         {
-            string pw = "ahsbgdzn";
+            string pw = "ahsbgdzn"; // input
             int idx = 0;
             MD5 md5 = MD5.Create();
             bool done = false;
